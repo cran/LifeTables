@@ -25,8 +25,8 @@ This function can only take contiguous age groups as arguments. Whatever age gro
 \value{
 %%  ~Describe the value returned
 %%  If it is a LIST, use
-  \item{train}{The output from the function \code{\link{mclustDAtrain}}, the parameters and other summary information for the model best fitting each class according to BIC.}
-  \item{test }{The output from the function \code{\link{mclustDAtest}}, A matrix in which the [i,j]th entry is the density for that test observation i in the model for class j.}
+  \item{train}{The output from the function \code{\link{MclustDA}}, the parameters and other summary information for the model best fitting each class according to BIC.}
+  \item{out.dens}{The output from the function \code{\link{predict}(MclustDA model name)}, A matrix in which the [i,j]th entry is the density for observation i in the model for class j.}
   \item{classification }{The classification for the test data}
 }
 \references{
@@ -34,7 +34,7 @@ S. Clark and D. Sharrow (2011) "Contemporary Model Life Tables for Developed Cou
 
 C. Fraley and A. E. Raftery (2002) "Model-based clustering, discriminant analysis, and density estimation." \emph{Journal of the American Statistical Association} \bold{97}:611-631.
 
-C. Fraley and A. E. Raftery (2006) "MCLUST Version 3 for R: Normal Mixture Modeling and Model-Based Clustering", Technical Report no. 504, Department of Statistics, University of Washington
+C. Fraley, A. E. Raftery, T. B. Murphy, L. Scrucca (2012) "mclust Version 4 for R: Normal Mixture Modeling for Model-Based Clustering, Classification, and Density Estimation", Technical Report no. 597, Department of Statistics, University of Washington
 
 \emph{Human Mortality Database} University of California, Berkeley (USA), and Max Planck Institute for Demographic Research (Germany). Available at www.mortality.org or www.humanmortality.de (data downloaded on [November 2009]).
 }
@@ -47,7 +47,7 @@ David Sharrow
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{mclustDAtest}}, \code{\link{mclustDAtrain}}, \code{\link{Mclust}}
+\code{\link{MclustDA}}, \code{\link{Mclust}}, \code{\link{MLTobs}}
 }
 \examples{
 # some test data

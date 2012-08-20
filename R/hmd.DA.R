@@ -2,7 +2,7 @@ hmd.DA <-
 function(x, child.mort=4, sex="female", adult.mort=NULL){
 	data(MLTobs)
 	if(is.numeric(adult.mort)){
-		x <- cbind(x, adult.mort)
+		x <- as.matrix(cbind(x, adult.mort))
 		}
 
 	if(sex=="male"){
@@ -38,9 +38,11 @@ function(x, child.mort=4, sex="female", adult.mort=NULL){
 		}
 		
 
-	out.test <- mclustDAtest(data=x, models=mod.train)
-	classification <- summary(out.test)$classification
+	test.mod <- predict(mod.train, newdata=x)
+	out.dens <- test.mod$z
+	classification <- test.mod$classification
+
 	
-	return(list(train=mod.train, test=out.test, classification=classification))
+	return(list(train=mod.train, out.dens=out.dens, classification=classification))
 	}
 

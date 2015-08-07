@@ -23,7 +23,7 @@ A mortality rate schedule with age groups 0-1, 1-4, 5-9, 10-14,..., up to any op
 The sex for the calculated life table. "male" or "female"
 }
   \item{lt.col}{
-The desired life table quantity to plot. lt.col="All", the default, will scroll through a plot of each quantity when the user keys "return" after each plot. Otherwise a specific column can be selected by using the following intergers (1-nmx, 2-nqx, 3-npx, 4-ndx, 5-lx, 6-nLx, 7-Tx, 8-ex) 
+The desired life table quantity to plot. lt.col="All", the default, will scroll through a plot of each quantity when the user keys "return" after each plot. Otherwise a specific column can be selected by using the following integers (1-nmx, 2-nqx, 3-npx, 4-ndx, 5-lx, 6-nLx, 7-Tx, 8-ex) 
 }
   \item{log}{
 Logical. If TRUE and \code{lt.col} is not set to "All", the y-axis will be in log scale. 
@@ -33,7 +33,7 @@ The start ages for each interval in the life table
 }
 }
 \details{
-If lt.col=3 (npx) and log=TRUE, a warning message will appear noting that a y value <= 0 is ommitted. This is the probability of surviving the final interval, which is by definition, 0. 
+If lt.col=3 (npx) and log=TRUE, a warning message will appear noting that a y value <= 0 is omitted. This is the probability of surviving the final interval, which is by definition, 0. 
 }
 %\value{
 %%  ~Describe the value returned
@@ -46,7 +46,7 @@ If lt.col=3 (npx) and log=TRUE, a warning message will appear noting that a y va
 %% ~put references to the literature/web site here ~
 %}
 \author{
-David Sharrow
+David J. Sharrow
 }
 %\note{
 %%  ~~further notes~~

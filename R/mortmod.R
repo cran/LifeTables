@@ -1,6 +1,5 @@
 mortmod <-
 function(pattern, sex="female", alpha=0){
-		data(MLTobs)
 		x <- seq(0,5,.5)
 	 	csd.prop <- 1-pexp(x, rate=.75) 
  		f.csd.weight <- approxfun(x, csd.prop)
@@ -12,12 +11,12 @@ function(pattern, sex="female", alpha=0){
 			}
 
 		if(alpha < 0){
-			to.subtract <- w.ave(csd=lo.devs[pattern,], oad=lo.devs[6,], 
+			to.subtract <- w.ave(csd=get("lo.devs",envir=.GlobalEnv)[pattern,], oad=get("lo.devs",envir=.GlobalEnv)[nrow(get("lo.devs",envir=.GlobalEnv)),], 
 				csd.weight=f.csd.weight(abs(alpha)))
-			model.patt <- averages.smooth[,pattern] + alpha*to.subtract} else {
-			to.add <- w.ave(csd=hi.devs[pattern,], oad=hi.devs[6,], 
+			model.patt <- get("averages.smooth",envir=.GlobalEnv)[,pattern] + alpha*to.subtract} else {
+			to.add <- w.ave(csd=get("hi.devs",envir=.GlobalEnv)[pattern,], oad=get("hi.devs",envir=.GlobalEnv)[nrow(get("hi.devs",envir=.GlobalEnv)),], 
 				csd.weight=f.csd.weight(abs(alpha)))
-			model.patt <- averages.smooth[,pattern] + alpha*to.add
+			model.patt <- get("averages.smooth",envir=.GlobalEnv)[,pattern] + alpha*to.add
 			}
 			
 			model.patt[model.patt>0] <- -.0001

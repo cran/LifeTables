@@ -9,6 +9,6 @@ function(pattern, e0.target, sex="female"){
 		ex.diff <- abs(e0.target-e0)
 		return(ex.diff)
 	}
-	optimize(f=ex.alpha, interval=c(-4,4), tol=.01)$minimum
+	optimize(f=ex.alpha, interval=c(-5,3), tol=.01)$minimum
 	}
 

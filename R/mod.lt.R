@@ -1,5 +1,5 @@
 mod.lt <- function(child.value, child.mort=4, e0.target=NULL, adult.mort=NULL, sex="female", alpha=0){
-	data(MLTobs)
+	#data(MLTobs)
 	class <- hmd.DA(x=child.value, sex=sex, child.mort=child.mort, adult.mort=adult.mort)
 	class <- as.numeric(class$classification)	
 	# If e0.target is provided (not null), then get alpha from that

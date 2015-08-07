@@ -15,7 +15,7 @@
 \alias{averages.smooth}
 \alias{class5}
 \alias{f.csd.weight}
-\alias{fitted.ms.pca.scores}
+\alias{Mx.svd.scores}
 \alias{flt.mx}
 \alias{flt.mx.info}
 \alias{hi.devs}
@@ -43,11 +43,11 @@
 \alias{Patterns.final.coeffs}
 
 \title{
-Internal Functions and datasets of LifeTables
+Internal Functions and data sets of LifeTables
 }
 
 \description{
-These functions and datasets are not to be used directly by the user.
+These functions and data sets are not to be used directly by the user.
 }
 
 \keyword{internal}

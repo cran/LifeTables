@@ -20,7 +20,7 @@ To export the life table into a csv file, press the \sQuote{Export} button. To p
 
 For the GUI to run the user will first need to install GTK+. 
 
-GTK+ can be downloaded here \url{http://www.gtk.org/download.html}. 
+GTK+ can be downloaded here \url{http://www.gtk.org/download/index.php}. 
 
 If the user does not first install GTK and invokes the GUI from the \code{R} console, a dialogue box will appear to ask if you want to install GTK.  
 

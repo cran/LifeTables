@@ -11,7 +11,7 @@ alpha.e0(pattern, e0.target, sex="female")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{pattern}{An integer (1-5) which indicates the desired life table family
+  \item{pattern}{An integer (1-7) which indicates the desired life table family
 }
   \item{e0.target}{The desired life expectancy
 }
@@ -27,7 +27,7 @@ An appropriate life table family (pattern) can be found using \code{\link{hmd.DA
 %% ~put references to the literature/web site here ~
 %}
 \author{
-David Sharrow
+David J. Sharrow
 }
 %\note{
 %%  ~~further notes~~
